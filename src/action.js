@@ -1,17 +1,11 @@
-let score = 0;
+const MORE_BEER = 'MORE_BEER';
 
-export const moreBeer = increment => {
-    return {
-        type: 'MORE_BEER',
-        score: score++,
-        increment
-    }
+export const moreBeer = () => {
+    return { type: MORE_BEER };
 }
 
-export const lessBeer = decrement => {
-    return {
-        type: 'LESS_BEER',
-        score: score--,
-        decrement
-    }
+const LESS_BEER = 'LESS_BEER';
+
+export const lessBeer = () => {
+    return { type: LESS_BEER };
 }

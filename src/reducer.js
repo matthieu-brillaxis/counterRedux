@@ -4,23 +4,11 @@ import { moreBeer, lessBeer } from './action';
 const counterApp = (state = [], action) => {
     switch(action.type) {
         case 'MORE_BEER':
-            return [
-                ...state, 
-                {
-                    score: action.score,
-                    increment: action.increment
-                }
-            ]
+            return state + 1;
         case 'LESS_BEER':
-        return [
-            ...state, 
-            {
-                score: action.score,
-                increment: action.decrement
-            }
-        ]
+            return state - 1;
         default:
-            return state
+            return state;
     }
 }
 
